@@ -12,7 +12,7 @@ class MinHeapTests: XCTestCase {
 
     // MARK: init()
 
-    func test_init_heapIsEmptyOnInit() {
+    func test_init_heapCountEqualsZeroOnInit() {
         let sut = makeSUT()
         XCTAssertEqual(sut.count, 0)
     }
@@ -41,6 +41,55 @@ class MinHeapTests: XCTestCase {
             sut.build(from: ds)
             XCTAssertEqual(sut.count, expectedCount)
         }
+    }
+
+    // MARK: isEmpty
+
+    func test_isEmpty_returnsEmptyOnInit() {
+        let sut = makeSUT()
+        XCTAssertEqual(sut.isEmpty, true)
+    }
+
+    func test_isEmpty_returnsEmptyOnBuildWithNoElements() {
+        var sut = makeSUT()
+
+        sut.build(from: [])
+
+        XCTAssertEqual(sut.isEmpty, true)
+    }
+
+    func test_isEmpty_returnsNotEmptyOnBuildWithSingleElement() {
+        var sut = makeSUT()
+
+        sut.build(from: [1])
+
+        XCTAssertEqual(sut.isEmpty, false)
+    }
+
+    func test_isEmpty_returnsNotEmptyOnBuildWithMultiElements() {
+        var sut = makeSUT()
+
+        sut.build(from: [1,2,3])
+
+        XCTAssertEqual(sut.isEmpty, false)
+    }
+
+    func test_isEmpty_returnsNotEmptyOnInsertSingleElement() {
+        var sut = makeSUT()
+
+        sut.insert(1)
+
+        XCTAssertEqual(sut.isEmpty, false)
+    }
+
+    func test_isEmpty_returnsNotEmptyOnInsertMultiElements() {
+        var sut = makeSUT()
+
+        sut.insert(1)
+        sut.insert(2)
+        sut.insert(3)
+
+        XCTAssertEqual(sut.isEmpty, false)
     }
 
     // MARK: peek()

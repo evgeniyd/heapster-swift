@@ -4,6 +4,7 @@ public struct MinHeap <Element: Comparable> {
     private var heapArray: [Element] = []
 
     public var count: Int { heapArray.count }
+    public var isEmpty: Bool { heapArray.isEmpty }
 
     public init() { }
 

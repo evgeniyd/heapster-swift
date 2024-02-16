@@ -6,14 +6,14 @@ Drop-in frequently used / needed DT to solve Leetcode problems
 
 1. Simple AF
 2. Tested
-3. Compact (Less lines of code)
+3. Compact / Obfuscated (Less lines of code)
 
 # TODO
 
 - [x] Add test to `MinHeap`
 - [ ] Add tests to `MaxHeap`
-- [ ] Refactor `MaxHeap` to compact
-- [ ] Refactor `MinHeap` to (be more) compact
+- [ ] Script to obfuscate `MinHeap`
+- [ ] Script to obfuscate `MaxHeap`
 - [ ] Move code comments to the documentation
 - [ ] Add performance tests
 
