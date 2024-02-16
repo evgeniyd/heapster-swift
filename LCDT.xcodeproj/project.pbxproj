@@ -75,7 +75,8 @@
 		5839BC6E2B7FE48600CA84B2 /* LCDT */ = {
 			isa = PBXGroup;
 			children = (
-				5839BC862B7FE4C400CA84B2 /* Heap */,
+				5839BC882B7FE4E700CA84B2 /* MaxHeap.swift */,
+				5839BC892B7FE4E700CA84B2 /* MinHeap.swift */,
 				5839BC6F2B7FE48600CA84B2 /* LCDT.h */,
 				5839BC702B7FE48600CA84B2 /* LCDT.docc */,
 			);
@@ -88,15 +89,6 @@
 				5839BC8D2B7FE5A500CA84B2 /* MinHeapTests.swift */,
 			);
 			path = LCDTTests;
-			sourceTree = "<group>";
-		};
-		5839BC862B7FE4C400CA84B2 /* Heap */ = {
-			isa = PBXGroup;
-			children = (
-				5839BC882B7FE4E700CA84B2 /* MaxHeap.swift */,
-				5839BC892B7FE4E700CA84B2 /* MinHeap.swift */,
-			);
-			path = Heap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
