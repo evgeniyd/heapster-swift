@@ -1,2 +1,3 @@
-# dt-4-lc-swift
-Data Structures for Leetcode Problems (Swift)
+# Data Structures for Leetcode Problems
+
+Drop-in frequently used / needed DT to solve Leetcode problems
