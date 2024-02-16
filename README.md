@@ -1,3 +1,5 @@
+![Repo image](/github-image.png)
+
 # Problem
 
 Heap is the data structure that I often has to drop into my Leetcode solutions. I implemented `MinHeap` and `MaxHeap` for educational purpose from scratch once, and started using it for Leetcode problems. This project exists so can quickly copy-and-paste a Heap to my Swift Leetcode solutions.
