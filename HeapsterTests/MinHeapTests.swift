@@ -1,12 +1,12 @@
 //
-//  MinHeapTests.swift
+//  HeapsterTests.swift
 //  LCDTTests
 //
 //  Created by Yevhen Dubinin on 2/16/24.
 //
 
 import XCTest
-import LCDT
+import Heapster
 
 class MinHeapTests: XCTestCase {
 
@@ -95,7 +95,7 @@ class MinHeapTests: XCTestCase {
     // MARK: peek()
 
     func test_peek_returnsNilOnInitHeap() {
-        var sut = makeSUT()
+        let sut = makeSUT()
 
         let value = sut.peek()
 

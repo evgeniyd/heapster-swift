@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5839BC6B2B7FE48600CA84B2"
-               BuildableName = "LCDT.framework"
-               BlueprintName = "LCDT"
-               ReferencedContainer = "container:LCDT.xcodeproj">
+               BuildableName = "Heapster.framework"
+               BlueprintName = "Heapster"
+               ReferencedContainer = "container:Heapster.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,9 +35,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5839BC752B7FE48600CA84B2"
-               BuildableName = "LCDTTests.xctest"
-               BlueprintName = "LCDTTests"
-               ReferencedContainer = "container:LCDT.xcodeproj">
+               BuildableName = "HeapsterTests.xctest"
+               BlueprintName = "HeapsterTests"
+               ReferencedContainer = "container:Heapster.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -63,9 +63,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5839BC6B2B7FE48600CA84B2"
-            BuildableName = "LCDT.framework"
-            BlueprintName = "LCDT"
-            ReferencedContainer = "container:LCDT.xcodeproj">
+            BuildableName = "Heapster.framework"
+            BlueprintName = "Heapster"
+            ReferencedContainer = "container:Heapster.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

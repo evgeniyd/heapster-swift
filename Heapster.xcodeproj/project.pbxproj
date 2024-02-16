@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5839BC712B7FE48600CA84B2 /* LCDT.docc in Sources */ = {isa = PBXBuildFile; fileRef = 5839BC702B7FE48600CA84B2 /* LCDT.docc */; };
-		5839BC772B7FE48600CA84B2 /* LCDT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5839BC6C2B7FE48600CA84B2 /* LCDT.framework */; };
-		5839BC7D2B7FE48600CA84B2 /* LCDT.h in Headers */ = {isa = PBXBuildFile; fileRef = 5839BC6F2B7FE48600CA84B2 /* LCDT.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5839BC712B7FE48600CA84B2 /* Heapster.docc in Sources */ = {isa = PBXBuildFile; fileRef = 5839BC702B7FE48600CA84B2 /* Heapster.docc */; };
+		5839BC772B7FE48600CA84B2 /* Heapster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5839BC6C2B7FE48600CA84B2 /* Heapster.framework */; };
+		5839BC7D2B7FE48600CA84B2 /* Heapster.h in Headers */ = {isa = PBXBuildFile; fileRef = 5839BC6F2B7FE48600CA84B2 /* Heapster.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5839BC8B2B7FE4E700CA84B2 /* MaxHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5839BC882B7FE4E700CA84B2 /* MaxHeap.swift */; };
 		5839BC8C2B7FE4E700CA84B2 /* MinHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5839BC892B7FE4E700CA84B2 /* MinHeap.swift */; };
 		5839BC8E2B7FE5A500CA84B2 /* MinHeapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5839BC8D2B7FE5A500CA84B2 /* MinHeapTests.swift */; };
@@ -26,10 +26,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5839BC6C2B7FE48600CA84B2 /* LCDT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LCDT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5839BC6F2B7FE48600CA84B2 /* LCDT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCDT.h; sourceTree = "<group>"; };
-		5839BC702B7FE48600CA84B2 /* LCDT.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = LCDT.docc; sourceTree = "<group>"; };
-		5839BC762B7FE48600CA84B2 /* LCDTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LCDTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5839BC6C2B7FE48600CA84B2 /* Heapster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Heapster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5839BC6F2B7FE48600CA84B2 /* Heapster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Heapster.h; sourceTree = "<group>"; };
+		5839BC702B7FE48600CA84B2 /* Heapster.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Heapster.docc; sourceTree = "<group>"; };
+		5839BC762B7FE48600CA84B2 /* HeapsterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeapsterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5839BC882B7FE4E700CA84B2 /* MaxHeap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxHeap.swift; sourceTree = "<group>"; };
 		5839BC892B7FE4E700CA84B2 /* MinHeap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinHeap.swift; sourceTree = "<group>"; };
 		5839BC8D2B7FE5A500CA84B2 /* MinHeapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinHeapTests.swift; sourceTree = "<group>"; };
@@ -47,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5839BC772B7FE48600CA84B2 /* LCDT.framework in Frameworks */,
+				5839BC772B7FE48600CA84B2 /* Heapster.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,8 +57,8 @@
 		5839BC622B7FE48600CA84B2 = {
 			isa = PBXGroup;
 			children = (
-				5839BC6E2B7FE48600CA84B2 /* LCDT */,
-				5839BC7A2B7FE48600CA84B2 /* LCDTTests */,
+				5839BC6E2B7FE48600CA84B2 /* Heapster */,
+				5839BC7A2B7FE48600CA84B2 /* HeapsterTests */,
 				5839BC6D2B7FE48600CA84B2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,29 +66,29 @@
 		5839BC6D2B7FE48600CA84B2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5839BC6C2B7FE48600CA84B2 /* LCDT.framework */,
-				5839BC762B7FE48600CA84B2 /* LCDTTests.xctest */,
+				5839BC6C2B7FE48600CA84B2 /* Heapster.framework */,
+				5839BC762B7FE48600CA84B2 /* HeapsterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5839BC6E2B7FE48600CA84B2 /* LCDT */ = {
+		5839BC6E2B7FE48600CA84B2 /* Heapster */ = {
 			isa = PBXGroup;
 			children = (
 				5839BC882B7FE4E700CA84B2 /* MaxHeap.swift */,
 				5839BC892B7FE4E700CA84B2 /* MinHeap.swift */,
-				5839BC6F2B7FE48600CA84B2 /* LCDT.h */,
-				5839BC702B7FE48600CA84B2 /* LCDT.docc */,
+				5839BC6F2B7FE48600CA84B2 /* Heapster.h */,
+				5839BC702B7FE48600CA84B2 /* Heapster.docc */,
 			);
-			path = LCDT;
+			path = Heapster;
 			sourceTree = "<group>";
 		};
-		5839BC7A2B7FE48600CA84B2 /* LCDTTests */ = {
+		5839BC7A2B7FE48600CA84B2 /* HeapsterTests */ = {
 			isa = PBXGroup;
 			children = (
 				5839BC8D2B7FE5A500CA84B2 /* MinHeapTests.swift */,
 			);
-			path = LCDTTests;
+			path = HeapsterTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,16 +98,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5839BC7D2B7FE48600CA84B2 /* LCDT.h in Headers */,
+				5839BC7D2B7FE48600CA84B2 /* Heapster.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		5839BC6B2B7FE48600CA84B2 /* LCDT */ = {
+		5839BC6B2B7FE48600CA84B2 /* Heapster */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5839BC802B7FE48600CA84B2 /* Build configuration list for PBXNativeTarget "LCDT" */;
+			buildConfigurationList = 5839BC802B7FE48600CA84B2 /* Build configuration list for PBXNativeTarget "Heapster" */;
 			buildPhases = (
 				5839BC672B7FE48600CA84B2 /* Headers */,
 				5839BC682B7FE48600CA84B2 /* Sources */,
@@ -118,14 +118,14 @@
 			);
 			dependencies = (
 			);
-			name = LCDT;
+			name = Heapster;
 			productName = "Leetcode Data Structures";
-			productReference = 5839BC6C2B7FE48600CA84B2 /* LCDT.framework */;
+			productReference = 5839BC6C2B7FE48600CA84B2 /* Heapster.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		5839BC752B7FE48600CA84B2 /* LCDTTests */ = {
+		5839BC752B7FE48600CA84B2 /* HeapsterTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5839BC832B7FE48600CA84B2 /* Build configuration list for PBXNativeTarget "LCDTTests" */;
+			buildConfigurationList = 5839BC832B7FE48600CA84B2 /* Build configuration list for PBXNativeTarget "HeapsterTests" */;
 			buildPhases = (
 				5839BC722B7FE48600CA84B2 /* Sources */,
 				5839BC732B7FE48600CA84B2 /* Frameworks */,
@@ -136,9 +136,9 @@
 			dependencies = (
 				5839BC792B7FE48600CA84B2 /* PBXTargetDependency */,
 			);
-			name = LCDTTests;
+			name = HeapsterTests;
 			productName = "Leetcode Data StructuresTests";
-			productReference = 5839BC762B7FE48600CA84B2 /* LCDTTests.xctest */;
+			productReference = 5839BC762B7FE48600CA84B2 /* HeapsterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -159,7 +159,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5839BC662B7FE48600CA84B2 /* Build configuration list for PBXProject "LCDT" */;
+			buildConfigurationList = 5839BC662B7FE48600CA84B2 /* Build configuration list for PBXProject "Heapster" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -172,8 +172,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5839BC6B2B7FE48600CA84B2 /* LCDT */,
-				5839BC752B7FE48600CA84B2 /* LCDTTests */,
+				5839BC6B2B7FE48600CA84B2 /* Heapster */,
+				5839BC752B7FE48600CA84B2 /* HeapsterTests */,
 			);
 		};
 /* End PBXProject section */
@@ -200,7 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5839BC712B7FE48600CA84B2 /* LCDT.docc in Sources */,
+				5839BC712B7FE48600CA84B2 /* Heapster.docc in Sources */,
 				5839BC8C2B7FE4E700CA84B2 /* MinHeap.swift in Sources */,
 				5839BC8B2B7FE4E700CA84B2 /* MaxHeap.swift in Sources */,
 			);
@@ -219,7 +219,7 @@
 /* Begin PBXTargetDependency section */
 		5839BC792B7FE48600CA84B2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5839BC6B2B7FE48600CA84B2 /* LCDT */;
+			target = 5839BC6B2B7FE48600CA84B2 /* Heapster */;
 			targetProxy = 5839BC782B7FE48600CA84B2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -442,7 +442,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5839BC662B7FE48600CA84B2 /* Build configuration list for PBXProject "LCDT" */ = {
+		5839BC662B7FE48600CA84B2 /* Build configuration list for PBXProject "Heapster" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5839BC7E2B7FE48600CA84B2 /* Debug */,
@@ -451,7 +451,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5839BC802B7FE48600CA84B2 /* Build configuration list for PBXNativeTarget "LCDT" */ = {
+		5839BC802B7FE48600CA84B2 /* Build configuration list for PBXNativeTarget "Heapster" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5839BC812B7FE48600CA84B2 /* Debug */,
@@ -460,7 +460,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5839BC832B7FE48600CA84B2 /* Build configuration list for PBXNativeTarget "LCDTTests" */ = {
+		5839BC832B7FE48600CA84B2 /* Build configuration list for PBXNativeTarget "HeapsterTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5839BC842B7FE48600CA84B2 /* Debug */,
