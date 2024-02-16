@@ -307,7 +307,7 @@ class MinHeapTests: XCTestCase {
 
     func test_insert_increasesCountOnMultiElementsInsert() {
         var sut = makeSUT()
-        var insertedElements = [4,2,7]
+        let insertedElements = [4,2,7]
         let expectedCount = insertedElements.count
 
         for ie in insertedElements{
@@ -319,7 +319,7 @@ class MinHeapTests: XCTestCase {
 
     func test_insert_increasesCountOnSameElementInserts() {
         var sut = makeSUT()
-        var insertedElements = [1,1,1,1]
+        let insertedElements = [1,1,1,1]
         let expectedCount = insertedElements.count
 
         for ie in insertedElements{
