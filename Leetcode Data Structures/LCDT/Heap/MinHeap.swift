@@ -1,6 +1,5 @@
 import Foundation
 
-// Let's do MinHeap
 public struct MinHeap <Element: Comparable> {
     private var heapArray: [Element]
 
