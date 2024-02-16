@@ -19,4 +19,7 @@ Heap is the data structure that I often has to drop into my Leetcode solutions. 
 - [ ] Move code comments to the documentation
 - [ ] Add performance tests
 
+# Leetcode
+Problems that *can* be solved with `Heap` data structure.
 
+[1481. Least Number of Unique Integers after K Removals](https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals/)
