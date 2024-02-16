@@ -15,5 +15,6 @@ Drop-in frequently used / needed DT to solve Leetcode problems
 - [ ] Refactor `MaxHeap` to compact
 - [ ] Refactor `MinHeap` to (be more) compact
 - [ ] Move code comments to the documentation
+- [ ] Add performance tests
 
 
