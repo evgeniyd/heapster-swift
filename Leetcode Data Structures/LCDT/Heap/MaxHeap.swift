@@ -80,9 +80,3 @@ extension MaxHeap: CustomStringConvertible {
         return "[\(description)]"
     }
 }
-
-extension MaxHeap: BinaryHeap {
-    public func extract() -> Element? {
-        return extractMax()
-    }
-}

@@ -62,14 +62,9 @@ public struct MinHeap <Element: Comparable> {
     private mutating func siftUp(from index: Int) {
         var index = index
         while (index > 0) {
-            // Get parent node using the rule that is oposite to Left: 2i+1 Right: 2i+2
-            // 2x+1 = y; 2x = y-1; x = (y-1) / 2, where y index of the element to the left of the parent
-            // 2x+2 = y; 2x = y -2; x = (y - 2) / 2,
             let parentIndex = (index - 1) / 2
             if (heapArray[index] < heapArray[parentIndex]) {
-                // move the NEW node up
                 heapArray.swapAt(index, parentIndex)
-                // update index, as we moved one level up in the tree
                 index = parentIndex
             } else {
                 break;

@@ -10,7 +10,6 @@
 		5839BC712B7FE48600CA84B2 /* LCDT.docc in Sources */ = {isa = PBXBuildFile; fileRef = 5839BC702B7FE48600CA84B2 /* LCDT.docc */; };
 		5839BC772B7FE48600CA84B2 /* LCDT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5839BC6C2B7FE48600CA84B2 /* LCDT.framework */; };
 		5839BC7D2B7FE48600CA84B2 /* LCDT.h in Headers */ = {isa = PBXBuildFile; fileRef = 5839BC6F2B7FE48600CA84B2 /* LCDT.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5839BC8A2B7FE4E700CA84B2 /* BinaryHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5839BC872B7FE4E700CA84B2 /* BinaryHeap.swift */; };
 		5839BC8B2B7FE4E700CA84B2 /* MaxHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5839BC882B7FE4E700CA84B2 /* MaxHeap.swift */; };
 		5839BC8C2B7FE4E700CA84B2 /* MinHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5839BC892B7FE4E700CA84B2 /* MinHeap.swift */; };
 		5839BC8E2B7FE5A500CA84B2 /* MinHeapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5839BC8D2B7FE5A500CA84B2 /* MinHeapTests.swift */; };
@@ -31,7 +30,6 @@
 		5839BC6F2B7FE48600CA84B2 /* LCDT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCDT.h; sourceTree = "<group>"; };
 		5839BC702B7FE48600CA84B2 /* LCDT.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = LCDT.docc; sourceTree = "<group>"; };
 		5839BC762B7FE48600CA84B2 /* LCDTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LCDTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5839BC872B7FE4E700CA84B2 /* BinaryHeap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryHeap.swift; sourceTree = "<group>"; };
 		5839BC882B7FE4E700CA84B2 /* MaxHeap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxHeap.swift; sourceTree = "<group>"; };
 		5839BC892B7FE4E700CA84B2 /* MinHeap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinHeap.swift; sourceTree = "<group>"; };
 		5839BC8D2B7FE5A500CA84B2 /* MinHeapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinHeapTests.swift; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 		5839BC862B7FE4C400CA84B2 /* Heap */ = {
 			isa = PBXGroup;
 			children = (
-				5839BC872B7FE4E700CA84B2 /* BinaryHeap.swift */,
 				5839BC882B7FE4E700CA84B2 /* MaxHeap.swift */,
 				5839BC892B7FE4E700CA84B2 /* MinHeap.swift */,
 			);
@@ -211,7 +208,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5839BC8A2B7FE4E700CA84B2 /* BinaryHeap.swift in Sources */,
 				5839BC712B7FE48600CA84B2 /* LCDT.docc in Sources */,
 				5839BC8C2B7FE4E700CA84B2 /* MinHeap.swift in Sources */,
 				5839BC8B2B7FE4E700CA84B2 /* MaxHeap.swift in Sources */,
