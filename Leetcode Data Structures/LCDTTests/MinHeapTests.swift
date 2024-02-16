@@ -82,6 +82,48 @@ class MinHeapTests: XCTestCase {
         XCTAssertEqual(returnedValue, 1)
     }
 
+    func test_peek_hasNoSideEffectsOnSingleElementHeap() throws {
+        var sut = makeSUT()
+        let input = [1]
+
+        sut.build(from: input)
+
+        let returnedValue1 = try XCTUnwrap(sut.peek())
+        XCTAssertEqual(returnedValue1, 1)
+        let returnedValue2 = try XCTUnwrap(sut.peek())
+        XCTAssertEqual(returnedValue2, 1)
+    }
+
+    func test_peek_hasNoSideEffectsOnMultiElementsHeap() throws {
+        var sut = makeSUT()
+        let input = [8,4,2]
+        let expectedCount = input.count
+
+        sut.build(from: input)
+
+        let returnedValue1 = try XCTUnwrap(sut.peek())
+        XCTAssertEqual(returnedValue1, 2)
+        XCTAssertEqual(sut.count, expectedCount)
+        let returnedValue2 = try XCTUnwrap(sut.peek())
+        XCTAssertEqual(returnedValue2, 2)
+        XCTAssertEqual(sut.count, expectedCount)
+    }
+
+    func test_peek_hasNoSideEffectsOnSameElementsHeap() throws {
+        var sut = makeSUT()
+        let input = [8,8,8]
+        let expectedCount = input.count
+
+        sut.build(from: input)
+
+        let returnedValue1 = try XCTUnwrap(sut.peek())
+        XCTAssertEqual(returnedValue1, 8)
+        XCTAssertEqual(sut.count, expectedCount)
+        let returnedValue2 = try XCTUnwrap(sut.peek())
+        XCTAssertEqual(returnedValue2, 8)
+        XCTAssertEqual(sut.count, expectedCount)
+    }
+
     // MARK: extractMin()
 
     func test_extractMin_returnsNilOnInitHeap() {
@@ -160,6 +202,106 @@ class MinHeapTests: XCTestCase {
 
         let value = sut.extractMin()
         XCTAssertNil(value)
+    }
+
+    func test_extractMin_returnsMinValueAfterMinElementInsert() throws {
+        var sut = makeSUT()
+        let input = [3,5,2,1]
+        let expectedValue = 0
+
+        sut.build(from: input)
+        sut.insert(expectedValue)
+
+        let returnedValue = try XCTUnwrap(sut.extractMin())
+        XCTAssertEqual(returnedValue, expectedValue)
+    }
+
+    func test_extractMin_returnsMinValueAfterNextToMinElementInsert() throws {
+        var sut = makeSUT()
+        let input = [3,5,1]
+        let expectedValue = 1
+        let insertedValue = 2
+
+        sut.build(from: input)
+        sut.insert(insertedValue)
+
+        let returnedValue = try XCTUnwrap(sut.extractMin())
+        XCTAssertEqual(returnedValue, expectedValue)
+    }
+
+    func test_extractMin_returnsMinValueAfterMultiElementInsert() throws {
+        var sut = makeSUT()
+        let input = [3,5,1]
+        let expectedValue = 1
+        let insertedValues = [8,4,6]
+
+        sut.build(from: input)
+
+        for ie in insertedValues {
+            sut.insert(ie)
+        }
+
+        let returnedValue = try XCTUnwrap(sut.extractMin())
+        XCTAssertEqual(returnedValue, expectedValue)
+    }
+
+    // MARK: insert()
+
+    func test_insert_increasesCountOnSingleElementInsert() {
+        var sut = makeSUT()
+        let expectedCount = 1
+
+        sut.insert(1)
+
+        XCTAssertEqual(sut.count, expectedCount)
+    }
+
+    func test_insert_increasesCountOnMultiElementsInsert() {
+        var sut = makeSUT()
+        var insertedElements = [4,2,7]
+        let expectedCount = insertedElements.count
+
+        for ie in insertedElements{
+            sut.insert(ie)
+        }
+
+        XCTAssertEqual(sut.count, expectedCount)
+    }
+
+    func test_insert_increasesCountOnSameElementInserts() {
+        var sut = makeSUT()
+        var insertedElements = [1,1,1,1]
+        let expectedCount = insertedElements.count
+
+        for ie in insertedElements{
+            sut.insert(ie)
+        }
+
+        XCTAssertEqual(sut.count, expectedCount)
+    }
+
+    func test_insert_increasesCountAfterBuild() {
+        var sut = makeSUT()
+        let input = [3,4,2]
+        sut.build(from: input)
+
+        let expectedCount = input.count + 1
+
+        sut.insert(1)
+
+        XCTAssertEqual(sut.count, expectedCount)
+    }
+
+    func test_insert_increasesCountAfterBuildAndInsertingExistingElement() {
+        var sut = makeSUT()
+        let input = [3,4,2]
+        sut.build(from: input)
+
+        let expectedCount = input.count + 1
+
+        sut.insert(3)
+
+        XCTAssertEqual(sut.count, expectedCount)
     }
 
     // MARK: Helpers
