@@ -38,11 +38,7 @@ public struct MinHeap <Element: Comparable> {
     }
 
     public func peek() -> Element? {
-        guard (!heapArray.isEmpty) else {
-            return nil
-        }
-
-        return heapArray.first!
+        return heapArray.first
     }
 
     public mutating func extractMin() -> Element? {
