@@ -209,7 +209,7 @@ class MinHeapTests: XCTestCase {
         XCTAssertNil(value)
     }
 
-    func test_extractMin_returnsNilOnEmptyHeap() {
+    func test_extractMin_returnsNilOnBuildEmptyHeap() {
         var sut = makeSUT()
         sut.build(from: [])
 
@@ -218,28 +218,18 @@ class MinHeapTests: XCTestCase {
         XCTAssertNil(value)
     }
 
-    func test_extractMin_returnsEmptyCountOnSingleSizeHeap() {
+    func test_extractMin_returnsEmptyCountOnBuildSingleElementHeap() {
         var sut = makeSUT()
         let input = [1]
+        let expectedCount = 0
 
         sut.build(from: input)
         let _ = sut.extractMin()
 
-        XCTAssertEqual(sut.count, 0)
+        XCTAssertEqual(sut.count, expectedCount)
     }
 
-    func test_extractMin_returnsSameValueOnSingleSizeHeap() throws {
-        var sut = makeSUT()
-        let input = [1]
-        let expectedValue = 1
-
-        sut.build(from: input)
-        let returnedValue = try XCTUnwrap(sut.extractMin())
-
-        XCTAssertEqual(expectedValue, returnedValue)
-    }
-
-    func test_extractMin_decreasesCountOfElements() {
+    func test_extractMin_decreasesCountOnBuildMultipleElementsHeap() {
         var sut = makeSUT()
         let input = [1,3,5]
         let expectedCount = input.count - 1
@@ -250,7 +240,18 @@ class MinHeapTests: XCTestCase {
         XCTAssertEqual(sut.count, expectedCount)
     }
 
-    func test_extractMin_returnsMinValue() throws {
+    func test_extractMin_returnsMinValueOnBuildSingleElementHeap() throws {
+        var sut = makeSUT()
+        let input = [1]
+        let expectedValue = 1
+
+        sut.build(from: input)
+        let returnedValue = try XCTUnwrap(sut.extractMin())
+
+        XCTAssertEqual(expectedValue, returnedValue)
+    }
+
+    func test_extractMin_returnsMinValueOnBuildMultipleElementsHeap() throws {
         var sut = makeSUT()
         let input = [3,5,2,1]
         let expectedValues = [1,2,3,5]
@@ -304,7 +305,7 @@ class MinHeapTests: XCTestCase {
         XCTAssertEqual(returnedValue, expectedValue)
     }
 
-    func test_extractMin_returnsMinValueAfterMultiElementInsert() throws {
+    func test_extractMin_returnsMinValueAfterMultiElementsInsert() throws {
         var sut = makeSUT()
         let input = [3,5,1]
         let expectedValue = 1

@@ -209,6 +209,118 @@ class MaxHeapTests: XCTestCase {
         XCTAssertNil(value)
     }
 
+    func test_extractMax_returnsNilOnBuildEmptyHeap() {
+        var sut = makeSUT()
+        sut.build(from: [])
+
+        let value = sut.extractMax()
+
+        XCTAssertNil(value)
+    }
+
+    func test_extractMax_returnsEmptyCountOnBuildSingleElementHeap() {
+        var sut = makeSUT()
+        let input = [1]
+        let expectedCount = 0
+
+        sut.build(from: input)
+        let _ = sut.extractMax()
+
+        XCTAssertEqual(sut.count, expectedCount)
+    }
+
+    func test_extractMax_decreasesCountOnBuildMultipleElementsHeap() {
+        var sut = makeSUT()
+        let input = [1,3,5]
+        let expectedCount = input.count - 1
+
+        sut.build(from: input)
+        let _ = sut.extractMax()
+
+        XCTAssertEqual(sut.count, expectedCount)
+    }
+
+    func test_extractMax_returnsMaxValueOnBuildSingleElementHeap() throws {
+        var sut = makeSUT()
+        let input = [1]
+        let expectedValue = 1
+
+        sut.build(from: input)
+        let returnedValue = try XCTUnwrap(sut.extractMax())
+
+        XCTAssertEqual(expectedValue, returnedValue)
+    }
+
+    func test_extractMax_returnsMaxValueOnBuildMultipleElementsHeap() throws {
+        var sut = makeSUT()
+        let input = [3,5,2,1]
+        let expectedValues = [5,3,2,1]
+
+        sut.build(from: input)
+
+        for i in 0..<expectedValues.count {
+            let expectedValue = expectedValues[i]
+            let returnedValue = try XCTUnwrap(sut.extractMax())
+            XCTAssertEqual(expectedValue, returnedValue)
+        }
+    }
+
+    func test_extractMax_returnsNilAfterExtractingAllValues() throws {
+        var sut = makeSUT()
+        let input = [3,5,2,1]
+        var count = input.count
+
+        sut.build(from: input)
+        while count > 0 {
+            let _ = sut.extractMax()
+            count -= 1
+        }
+
+        let value = sut.extractMax()
+        XCTAssertNil(value)
+    }
+
+    func test_extractMin_returnsMaxValueAfterMaxElementInsert() throws {
+        var sut = makeSUT()
+        let input = [3,5,2,1]
+        let expectedValue = 8
+
+        sut.build(from: input)
+        sut.insert(expectedValue)
+
+        let returnedValue = try XCTUnwrap(sut.extractMax())
+        XCTAssertEqual(returnedValue, expectedValue)
+    }
+
+    func test_extractMax_returnsMaxValueAfterNextToMaxElementInsert() throws {
+        var sut = makeSUT()
+        let input = [3,5,1]
+        let expectedValue = 5
+        let insertedValue = 4
+
+        sut.build(from: input)
+        sut.insert(insertedValue)
+
+        let returnedValue = try XCTUnwrap(sut.extractMax())
+        XCTAssertEqual(returnedValue, expectedValue)
+    }
+
+    func test_extractMax_returnsMaxValueAfterMultiElementsInsert() throws {
+        var sut = makeSUT()
+        let input = [8,4,6]
+        let expectedValue = 8
+        let insertedValues = [3,5,1]
+
+        sut.build(from: input)
+
+        for ie in insertedValues {
+            sut.insert(ie)
+        }
+
+        let returnedValue = try XCTUnwrap(sut.extractMax())
+        XCTAssertEqual(returnedValue, expectedValue)
+    }
+
     // MARK: Helpers
 
     private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> MaxHeap<Int> {
