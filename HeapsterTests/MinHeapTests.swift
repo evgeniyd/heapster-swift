@@ -356,11 +356,10 @@ class MinHeapTests: XCTestCase {
         XCTAssertEqual(sut.count, expectedCount)
     }
 
-    func test_insert_increasesCountAfterBuild() {
+    func test_insert_increasesCountAfterBuildWithMultipleElements() {
         var sut = makeSUT()
         let input = [3,4,2]
         sut.build(from: input)
-
         let expectedCount = input.count + 1
 
         sut.insert(1)

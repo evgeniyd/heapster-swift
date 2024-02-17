@@ -321,6 +321,64 @@ class MaxHeapTests: XCTestCase {
         XCTAssertEqual(returnedValue, expectedValue)
     }
 
+    // MARK: insert()
+
+    func test_insert_increasesCountOnSingleElementInsert() {
+        var sut = makeSUT()
+        let expectedCount = 1
+
+        sut.insert(1)
+
+        XCTAssertEqual(sut.count, expectedCount)
+    }
+
+    func test_insert_increasesCountOnMultiElementsInsert() {
+        var sut = makeSUT()
+        let insertedElements = [4,2,7]
+        let expectedCount = insertedElements.count
+
+        for ie in insertedElements{
+            sut.insert(ie)
+        }
+
+        XCTAssertEqual(sut.count, expectedCount)
+    }
+
+    func test_insert_increasesCountOnSameElementInserts() {
+        var sut = makeSUT()
+        let insertedElements = [1,1,1,1]
+        let expectedCount = insertedElements.count
+
+        for ie in insertedElements{
+            sut.insert(ie)
+        }
+
+        XCTAssertEqual(sut.count, expectedCount)
+    }
+
+    func test_insert_increasesCountAfterBuildWithMultipleElements() {
+        var sut = makeSUT()
+        let input = [3,4,2]
+        sut.build(from: input)
+        let expectedCount = input.count + 1
+
+        sut.insert(1)
+
+        XCTAssertEqual(sut.count, expectedCount)
+    }
+
+    func test_insert_increasesCountAfterBuildAndInsertingExistingElement() {
+        var sut = makeSUT()
+        let input = [3,4,2]
+        sut.build(from: input)
+
+        let expectedCount = input.count + 1
+
+        sut.insert(3)
+
+        XCTAssertEqual(sut.count, expectedCount)
+    }
+
     // MARK: Helpers
 
     private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> MaxHeap<Int> {
