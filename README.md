@@ -13,11 +13,18 @@
 1. Simple AF
 2. Tested
 3. Minificated (Less lines of code)
+4. Performant enough
+
+# Notes:
+
+* Code is duplicated on purpose: the idea is one uses either [MaxHeap](Heapster/MaxHeap.swift) or [MinHeap](Heapster/MinHeap.swift) by copying and pasting the source code into Leetcode code editor.
+* API of both Heaps is unified, except `extractMin()` vs. `extractMax()` to be more descriptive. It is a personal choice.
+* I am toying with this idea of minifying the source code, and creating a release versions of it. Similar to how minification is often done with JavaScript. In the end of the day, for the goals of this project, the code should not be readable as far as it delivers expected behavior.
 
 # TODO
 
 - [x] Add test to `MinHeap`
-- [ ] Add tests to `MaxHeap`
+- [x] Add tests to `MaxHeap`
 - [ ] Script to minify `MinHeap`
 - [ ] Script to minify `MaxHeap`
 - [ ] Move code comments to the documentation
