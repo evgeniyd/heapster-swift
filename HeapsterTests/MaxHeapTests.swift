@@ -199,6 +199,16 @@ class MaxHeapTests: XCTestCase {
         XCTAssertEqual(sut.count, expectedCount)
     }
 
+    // MARK: extractMax()
+
+    func test_extractMax_returnsNilOnInitHeap() {
+        var sut = makeSUT()
+
+        let value = sut.extractMax()
+
+        XCTAssertNil(value)
+    }
+
     // MARK: Helpers
 
     private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> MaxHeap<Int> {
