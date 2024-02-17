@@ -1,8 +1,12 @@
-![Repo image](/github-image.png)
+# Heaps
+
+[MaxHeap.swift](Heapster/MaxHeap.swift)
+
+[MinHeap.swift](Heapster/MinHeap.swift)
 
 # Problem
 
-**Heap** is the data structure that I often has to drop into my [Leetcode](https://leetcode.com) solutions. I implemented `MinHeap` and `MaxHeap` for educational purpose from scratch once, and started using it for Leetcode problems. This project exists so can quickly copy-and-paste a Heap to my Swift Leetcode solutions.
+**Heap** is the data structure that I often has to drop into my [Leetcode](https://leetcode.com) solutions. I implemented `MinHeap` and `MaxHeap` for educational purpose from scratch once, and started using it for Leetcode problems. This project exists so one can quickly copy-and-paste a Heap to a [Swift] Leetcode solutions.
 
 # Goals
 
@@ -23,3 +27,5 @@
 Problems that *can* be solved with `Heap` data structure.
 
 [1481. Least Number of Unique Integers after K Removals](https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals/)
+
+![Repo image](/github-image.png)
