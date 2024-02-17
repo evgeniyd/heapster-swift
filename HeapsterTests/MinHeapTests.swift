@@ -102,7 +102,7 @@ class MinHeapTests: XCTestCase {
         XCTAssertNil(value)
     }
 
-    func test_peek_returnsNilOnEmptyHeap() {
+    func test_peek_returnsNilOnBuildEmptyHeap() {
         var sut = makeSUT()
         let input: [Int] = []
 
@@ -111,27 +111,51 @@ class MinHeapTests: XCTestCase {
         XCTAssertNil(sut.peek())
     }
 
-    func test_peek_returnsMinValueOnDifferentElements() throws {
+    func test_peek_returnsNilOnBuildSingleElementHeap() throws {
         var sut = makeSUT()
-        let input = [3,1,2]
-        
-        sut.build(from: input)
-
-        let returnedValue = try XCTUnwrap(sut.peek())
-        XCTAssertEqual(returnedValue, 1)
-    }
-
-    func test_peek_returnsMinValueOnSameElements() throws {
-        var sut = makeSUT()
-        let input = [1,1,1]
+        let input: [Int] = [1]
+        let expectedValue = 1
 
         sut.build(from: input)
 
         let returnedValue = try XCTUnwrap(sut.peek())
-        XCTAssertEqual(returnedValue, 1)
+        XCTAssertEqual(returnedValue, expectedValue)
     }
 
-    func test_peek_hasNoSideEffectsOnSingleElementHeap() throws {
+    func test_peek_returnsMinValueOnBuildMultipleElementsHeap() throws {
+        var sut = makeSUT()
+
+        let dataSet:[[Int]: Int] = [
+            [1,2]: 1,
+            [3,1,2]: 1,
+            [4,1,2,3]: 1,
+            [8,10,2,3]: 2,
+        ]
+
+        for (input, expectedValue) in dataSet {
+            sut.build(from: input)
+            let returnedValue = try XCTUnwrap(sut.peek())
+            XCTAssertEqual(returnedValue, expectedValue)
+        }
+    }
+
+    func test_peek_returnsMinValueOnBuildSameElements() throws {
+        var sut = makeSUT()
+        let dataSet:[[Int]: Int] = [
+            [1,1]: 1,
+            [2,2,2]: 2,
+            [4,4,4,4]: 4,
+            [10,10,10,10]: 10,
+        ]
+
+        for (input, expectedValue) in dataSet {
+            sut.build(from: input)
+            let returnedValue = try XCTUnwrap(sut.peek())
+            XCTAssertEqual(returnedValue, expectedValue)
+        }
+    }
+
+    func test_peek_hasNoSideEffectsOnBuildSingleElementHeap() throws {
         var sut = makeSUT()
         let input = [1]
 
