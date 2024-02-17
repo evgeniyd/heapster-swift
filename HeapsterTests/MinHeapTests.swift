@@ -167,33 +167,35 @@ class MinHeapTests: XCTestCase {
         XCTAssertEqual(returnedValue2, 1)
     }
 
-    func test_peek_hasNoSideEffectsOnMultiElementsHeap() throws {
+    func test_peek_hasNoSideEffectsOnBuildMultiElementsHeap() throws {
         var sut = makeSUT()
         let input = [8,4,2]
         let expectedCount = input.count
+        let expectedValue = 2
 
         sut.build(from: input)
 
         let returnedValue1 = try XCTUnwrap(sut.peek())
-        XCTAssertEqual(returnedValue1, 2)
+        XCTAssertEqual(returnedValue1, expectedValue)
         XCTAssertEqual(sut.count, expectedCount)
         let returnedValue2 = try XCTUnwrap(sut.peek())
-        XCTAssertEqual(returnedValue2, 2)
+        XCTAssertEqual(returnedValue2, expectedValue)
         XCTAssertEqual(sut.count, expectedCount)
     }
 
-    func test_peek_hasNoSideEffectsOnSameElementsHeap() throws {
+    func test_peek_hasNoSideEffectsOnBuildSameElementsHeap() throws {
         var sut = makeSUT()
         let input = [8,8,8]
         let expectedCount = input.count
+        let expectedValue = 8
 
         sut.build(from: input)
 
         let returnedValue1 = try XCTUnwrap(sut.peek())
-        XCTAssertEqual(returnedValue1, 8)
+        XCTAssertEqual(returnedValue1, expectedValue)
         XCTAssertEqual(sut.count, expectedCount)
         let returnedValue2 = try XCTUnwrap(sut.peek())
-        XCTAssertEqual(returnedValue2, 8)
+        XCTAssertEqual(returnedValue2, expectedValue)
         XCTAssertEqual(sut.count, expectedCount)
     }
 
