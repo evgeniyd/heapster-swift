@@ -23,7 +23,7 @@ public struct MinHeap <Element: Comparable> {
     public func peek() -> Element? { heapArray.first }
 
     public mutating func extractMin() -> Element? {
-        guard let maxValue = self.peek() else {
+        guard let minValue = self.peek() else {
             return nil
         }
 
@@ -32,40 +32,38 @@ public struct MinHeap <Element: Comparable> {
 
         siftDown(from: 0)
 
-        return maxValue;
+        return minValue;
     }
 
     private mutating func siftDown(from index: Int) {
-        var parent = index
+        var parentIndex = index
         while true {
-            let left = 2 * parent + 1
-            let right = 2 * parent + 2
-            var candidate = parent
+            let leftChildIndex = 2 * parentIndex + 1
+            let rightChildIndex = 2 * parentIndex + 2
+            var candidateIndex = parentIndex
 
-            if left < heapArray.count && heapArray[left] < heapArray[candidate] {
-                candidate = left
+            if leftChildIndex < heapArray.count && heapArray[leftChildIndex] < heapArray[candidateIndex] {
+                candidateIndex = leftChildIndex
             }
 
-            if right < heapArray.count && heapArray[right] < heapArray[candidate] {
-                candidate = right
+            if rightChildIndex < heapArray.count && heapArray[rightChildIndex] < heapArray[candidateIndex] {
+                candidateIndex = rightChildIndex
             }
 
-            if candidate == parent {
-                return
-            }
+            if candidateIndex == parentIndex { break }
 
-            heapArray.swapAt(parent, candidate)
-            parent = candidate
+            heapArray.swapAt(parentIndex, candidateIndex)
+            parentIndex = candidateIndex
         }
     }
 
     private mutating func siftUp(from index: Int) {
-        var index = index
-        while (index > 0) {
-            let parentIndex = (index - 1) / 2
-            if (heapArray[index] < heapArray[parentIndex]) {
-                heapArray.swapAt(index, parentIndex)
-                index = parentIndex
+        var childIndex = index
+        while (childIndex > 0) {
+            let parentIndex = (childIndex - 1) / 2
+            if (heapArray[childIndex] < heapArray[parentIndex]) {
+                heapArray.swapAt(childIndex, parentIndex)
+                childIndex = parentIndex
             } else {
                 break;
             }
