@@ -8,7 +8,7 @@
 import XCTest
 import Heapster
 
-class MaxHeapTests: XCTestCase {
+class MaxHeapTests: XCTestCase, MaxHeapTestSpecs {
 
     // MARK: init()
 
@@ -66,7 +66,7 @@ class MaxHeapTests: XCTestCase {
         XCTAssertEqual(sut.isEmpty, false)
     }
 
-    func test_isEmpty_returnsNotEmptyOnBuildWithMultiElements() {
+    func test_isEmpty_returnsNotEmptyOnBuildWithMultipleElements() {
         var sut = makeSUT()
 
         sut.build(from: [1,2,3])
@@ -82,7 +82,7 @@ class MaxHeapTests: XCTestCase {
         XCTAssertEqual(sut.isEmpty, false)
     }
 
-    func test_isEmpty_returnsNotEmptyOnInsertMultiElements() {
+    func test_isEmpty_returnsNotEmptyOnInsertMultipleElements() {
         var sut = makeSUT()
 
         sut.insert(1)
@@ -94,7 +94,7 @@ class MaxHeapTests: XCTestCase {
 
     // MARK: peek()
 
-    func test_peek_returnsNilOnInitHeap() {
+    func test_peek_returnsNilOnInit() {
         let sut = makeSUT()
 
         let value = sut.peek()
@@ -102,7 +102,7 @@ class MaxHeapTests: XCTestCase {
         XCTAssertNil(value)
     }
 
-    func test_peek_returnsNilOnBuildEmptyHeap() {
+    func test_peek_returnsNilOnBuildWithNoElements() {
         var sut = makeSUT()
         let input: [Int] = []
 
@@ -111,7 +111,7 @@ class MaxHeapTests: XCTestCase {
         XCTAssertNil(sut.peek())
     }
 
-    func test_peek_returnsNilOnBuildSingleElementHeap() throws {
+    func test_peek_returnsNilOnBuildWithSingleElement() throws {
         var sut = makeSUT()
         let input: [Int] = [1]
         let expectedValue = 1
@@ -122,7 +122,7 @@ class MaxHeapTests: XCTestCase {
         XCTAssertEqual(returnedValue, expectedValue)
     }
 
-    func test_peek_returnsMaxValueOnBuildMultipleElementsHeap() throws {
+    func test_peek_returnsMaxValueOnBuildWithMultipleElements() throws {
         var sut = makeSUT()
 
         let dataSet:[[Int]: Int] = [
@@ -155,7 +155,7 @@ class MaxHeapTests: XCTestCase {
         }
     }
 
-    func test_peek_hasNoSideEffectsOnBuildSingleElementHeap() throws {
+    func test_peek_hasNoSideEffectsOnBuildWithSingleElement() throws {
         var sut = makeSUT()
         let input = [1]
 
@@ -167,7 +167,7 @@ class MaxHeapTests: XCTestCase {
         XCTAssertEqual(returnedValue2, 1)
     }
 
-    func test_peek_hasNoSideEffectsOnBuildMultiElementsHeap() throws {
+    func test_peek_hasNoSideEffectsOnBuildWithMultipleElements() throws {
         var sut = makeSUT()
         let input = [8,4,2]
         let expectedCount = input.count
@@ -183,7 +183,7 @@ class MaxHeapTests: XCTestCase {
         XCTAssertEqual(sut.count, expectedCount)
     }
 
-    func test_peek_hasNoSideEffectsOnBuildSameElementsHeap() throws {
+    func test_peek_hasNoSideEffectsOnBuildWithSameElements() throws {
         var sut = makeSUT()
         let input = [8,8,8]
         let expectedCount = input.count
@@ -201,7 +201,7 @@ class MaxHeapTests: XCTestCase {
 
     // MARK: extractMax()
 
-    func test_extractMax_returnsNilOnInitHeap() {
+    func test_extractMax_returnsNilOnInit() {
         var sut = makeSUT()
 
         let value = sut.extractMax()
@@ -209,7 +209,7 @@ class MaxHeapTests: XCTestCase {
         XCTAssertNil(value)
     }
 
-    func test_extractMax_returnsNilOnBuildEmptyHeap() {
+    func test_extractMax_returnsNilOnBuildWithNoElements() {
         var sut = makeSUT()
         sut.build(from: [])
 
@@ -218,7 +218,7 @@ class MaxHeapTests: XCTestCase {
         XCTAssertNil(value)
     }
 
-    func test_extractMax_returnsEmptyCountOnBuildSingleElementHeap() {
+    func test_extractMax_returnsEmptyCountOnBuildWithSingleElement() {
         var sut = makeSUT()
         let input = [1]
         let expectedCount = 0
@@ -229,7 +229,7 @@ class MaxHeapTests: XCTestCase {
         XCTAssertEqual(sut.count, expectedCount)
     }
 
-    func test_extractMax_decreasesCountOnBuildMultipleElementsHeap() {
+    func test_extractMax_decreasesCountOnBuildWithMultipleElements() {
         var sut = makeSUT()
         let input = [1,3,5]
         let expectedCount = input.count - 1
@@ -240,7 +240,7 @@ class MaxHeapTests: XCTestCase {
         XCTAssertEqual(sut.count, expectedCount)
     }
 
-    func test_extractMax_returnsMaxValueOnBuildSingleElementHeap() throws {
+    func test_extractMax_returnsMaxValueOnBuildWithSingleElement() throws {
         var sut = makeSUT()
         let input = [1]
         let expectedValue = 1
@@ -251,7 +251,7 @@ class MaxHeapTests: XCTestCase {
         XCTAssertEqual(expectedValue, returnedValue)
     }
 
-    func test_extractMax_returnsMaxValueOnBuildMultipleElementsHeap() throws {
+    func test_extractMax_returnsMaxValueOnBuildWithMultipleElements() throws {
         var sut = makeSUT()
         let input = [3,5,2,1]
         let expectedValues = [5,3,2,1]
@@ -280,7 +280,7 @@ class MaxHeapTests: XCTestCase {
         XCTAssertNil(value)
     }
 
-    func test_extractMin_returnsMaxValueAfterMaxElementInsert() throws {
+    func test_extractMax_returnsMaxValueAfterMaxElementInsert() throws {
         var sut = makeSUT()
         let input = [3,5,2,1]
         let expectedValue = 8
@@ -332,7 +332,7 @@ class MaxHeapTests: XCTestCase {
         XCTAssertEqual(sut.count, expectedCount)
     }
 
-    func test_insert_increasesCountOnMultiElementsInsert() {
+    func test_insert_increasesCountOnMultipleElementsInsert() {
         var sut = makeSUT()
         let insertedElements = [4,2,7]
         let expectedCount = insertedElements.count
@@ -344,7 +344,7 @@ class MaxHeapTests: XCTestCase {
         XCTAssertEqual(sut.count, expectedCount)
     }
 
-    func test_insert_increasesCountOnSameElementInserts() {
+    func test_insert_increasesCountOnSameElementInsert() {
         var sut = makeSUT()
         let insertedElements = [1,1,1,1]
         let expectedCount = insertedElements.count

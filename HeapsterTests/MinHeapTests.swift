@@ -94,7 +94,7 @@ class MinHeapTests: XCTestCase, MinHeapTestSpecs {
 
     // MARK: peek()
 
-    func test_peek_returnsNilOnInitHeap() {
+    func test_peek_returnsNilOnInit() {
         let sut = makeSUT()
 
         let value = sut.peek()

@@ -20,7 +20,7 @@ protocol HeapTestSpecs {
     func test_isEmpty_returnsNotEmptyOnInsertSingleElement()
     func test_isEmpty_returnsNotEmptyOnInsertMultipleElements()
 
-    func test_peek_returnsNilOnInitHeap()
+    func test_peek_returnsNilOnInit()
     func test_peek_returnsNilOnBuildWithNoElements()
     func test_peek_returnsNilOnBuildWithSingleElement() throws
     func test_peek_hasNoSideEffectsOnBuildWithSingleElement() throws
@@ -51,4 +51,23 @@ protocol MinHeapTestSpecs: HeapTestSpecs {
     func test_extractMin_returnsMinValueAfterMinElementInsert() throws
     func test_extractMin_returnsMinValueAfterNextToMinElementInsert() throws
     func test_extractMin_returnsMinValueAfterMultiElementsInsert() throws
+}
+
+protocol MaxHeapTestSpecs: HeapTestSpecs {
+    func test_peek_returnsMaxValueOnBuildWithMultipleElements() throws
+    func test_peek_returnsMaxValueOnBuildSameElements() throws
+
+    func test_extractMax_returnsNilOnInit()
+
+    func test_extractMax_returnsNilOnBuildWithNoElements()
+    func test_extractMax_returnsEmptyCountOnBuildWithSingleElement()
+    func test_extractMax_decreasesCountOnBuildWithMultipleElements()
+    func test_extractMax_returnsMaxValueOnBuildWithSingleElement() throws
+    func test_extractMax_returnsMaxValueOnBuildWithMultipleElements() throws
+
+    func test_extractMax_returnsNilAfterExtractingAllValues() throws
+
+    func test_extractMax_returnsMaxValueAfterMaxElementInsert() throws
+    func test_extractMax_returnsMaxValueAfterNextToMaxElementInsert() throws
+    func test_extractMax_returnsMaxValueAfterMultiElementsInsert() throws
 }
