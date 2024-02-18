@@ -15,6 +15,7 @@
 		5839BC8E2B7FE5A500CA84B2 /* MinHeapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5839BC8D2B7FE5A500CA84B2 /* MinHeapTests.swift */; };
 		5897420D2B814AC5001FDB85 /* MaxHeapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5897420C2B814AC5001FDB85 /* MaxHeapTests.swift */; };
 		5897420F2B815C1F001FDB85 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5897420E2B815C1F001FDB85 /* README.md */; };
+		589742192B81F0D3001FDB85 /* HeapTestSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589742182B81F0D3001FDB85 /* HeapTestSpecs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		5839BC8D2B7FE5A500CA84B2 /* MinHeapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinHeapTests.swift; sourceTree = "<group>"; };
 		5897420C2B814AC5001FDB85 /* MaxHeapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxHeapTests.swift; sourceTree = "<group>"; };
 		5897420E2B815C1F001FDB85 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		589742182B81F0D3001FDB85 /* HeapTestSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeapTestSpecs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			children = (
 				5839BC8D2B7FE5A500CA84B2 /* MinHeapTests.swift */,
 				5897420C2B814AC5001FDB85 /* MaxHeapTests.swift */,
+				589742182B81F0D3001FDB85 /* HeapTestSpecs.swift */,
 			);
 			path = HeapsterTests;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			files = (
 				5897420D2B814AC5001FDB85 /* MaxHeapTests.swift in Sources */,
 				5839BC8E2B7FE5A500CA84B2 /* MinHeapTests.swift in Sources */,
+				589742192B81F0D3001FDB85 /* HeapTestSpecs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
