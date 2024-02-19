@@ -30,10 +30,11 @@
 - [ ] Move code comments to the documentation
 - [ ] Add performance tests
 
+![Repo image](/github-image.png)
+
 # Leetcode
 Problems that *can* be solved with `Heap` data structure.
 
 [1481. Least Number of Unique Integers after K Removals](https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals/)
 [1642. Furthest Building You Can Reach](https://leetcode.com/problems/furthest-building-you-can-reach/)
-
-![Repo image](/github-image.png)
+[2402. Meeting Rooms III](https://leetcode.com/problems/meeting-rooms-iii/)
