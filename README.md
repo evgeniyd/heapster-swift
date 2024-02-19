@@ -35,6 +35,6 @@
 # Leetcode
 Problems that *can* be solved with `Heap` data structure.
 
-[1481. Least Number of Unique Integers after K Removals](https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals/)
-[1642. Furthest Building You Can Reach](https://leetcode.com/problems/furthest-building-you-can-reach/)
-[2402. Meeting Rooms III](https://leetcode.com/problems/meeting-rooms-iii/)
+* [1481. Least Number of Unique Integers after K Removals](https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals/)
+* [1642. Furthest Building You Can Reach](https://leetcode.com/problems/furthest-building-you-can-reach/)
+* [2402. Meeting Rooms III](https://leetcode.com/problems/meeting-rooms-iii/)
