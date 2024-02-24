@@ -4,6 +4,8 @@
 
 [MinHeap.swift](Heapster/MinHeap.swift)
 
+The [Documentation](Heapster/Heapster.docc/Heapster.md) with more info.
+
 # Problem
 
 **Heap** is the data structure that I often has to drop into my [Leetcode](https://leetcode.com) solutions. I implemented `MinHeap` and `MaxHeap` for educational purpose from scratch once, and started using it for Leetcode problems. This project exists so one can quickly copy-and-paste a Heap to a [Swift] Leetcode solutions.
