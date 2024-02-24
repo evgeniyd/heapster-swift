@@ -19,7 +19,7 @@ struct Arrival: Comparable {
     let train: Int
     let time: Int
 
-    static func < (lhs: Int, rhs: Int) -> Bool {
+    static func < (lhs: Arrival, rhs: Arrival) -> Bool {
         lhs.time < rhs.time
     }
 } 
