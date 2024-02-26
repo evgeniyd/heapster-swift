@@ -6,6 +6,10 @@
 
 The [Documentation](Heapster/Heapster.docc/Heapster.md) with more info.
 
+<p align="left" width="30%">
+    <img width="50%" src="/github-image.png">
+</p>
+
 # Problem
 
 **Heap** is the data structure that I often has to drop into my [Leetcode](https://leetcode.com) solutions. I implemented `MinHeap` and `MaxHeap` for educational purpose from scratch once, and started using it for Leetcode problems. This project exists so one can quickly copy-and-paste a Heap to a [Swift] Leetcode solutions.
@@ -31,8 +35,6 @@ The [Documentation](Heapster/Heapster.docc/Heapster.md) with more info.
 - [ ] Script to minify `MaxHeap`
 - [ ] Move code comments to the documentation
 - [ ] Add performance tests
-
-![Repo image](/github-image.png)
 
 # Leetcode
 Problems that *can* be solved with `Heap` data structure.
