@@ -1,6 +1,6 @@
 [![CI-macOS](https://github.com/evgeniyd/heapster-swift/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/evgeniyd/heapster-swift/actions/workflows/CI.yml)
 
-# Heaps
+# Heapster
 
 [MaxHeap.swift](Heapster/MaxHeap.swift)
 
