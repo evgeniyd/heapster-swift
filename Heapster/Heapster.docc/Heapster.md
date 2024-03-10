@@ -27,6 +27,22 @@ struct Arrival: Comparable {
 
 Notice, that we picket `time` property to compare, and extract the Min/Max `Arrival` value based on that.
 
+The other common pattern is maintain the Min/Max Heap property between two elements with the same value using the other variable, e.g. `time`:
+
+```
+struct Arrival: Comparable {
+    let train: Int
+    let time: Int
+
+    static func < (lhs: Arrival, rhs: Arrival) -> Bool {
+        if lhs.train == rhs.train { 
+            return lhs.time < rhs.time
+        }
+        return lhs.train < rhs.train
+    }
+} 
+```
+
 ### <!--@START_MENU_TOKEN@-->Group<!--@END_MENU_TOKEN@-->
 
 - <!--@START_MENU_TOKEN@-->``Symbol``<!--@END_MENU_TOKEN@-->

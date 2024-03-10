@@ -45,3 +45,4 @@ Problems that *can* be solved with `Heap` data structure.
 * [1642. Furthest Building You Can Reach](https://leetcode.com/problems/furthest-building-you-can-reach/) | [Solution](https://leetcode.com/problems/furthest-building-you-can-reach/solutions/4749423/minheap-solution/)
 * [2402. Meeting Rooms III](https://leetcode.com/problems/meeting-rooms-iii/) | [Solution](https://leetcode.com/problems/meeting-rooms-iii/solutions/4748798/2-solutions-linear-search-two-heaps/)
 * [2092. Find All People With Secret](https://leetcode.com/problems/find-all-people-with-secret/) | [Solution](https://leetcode.com/problems/find-all-people-with-secret/solutions/4778215/minheap-solution)
+* [716. Max Stack](https://leetcode.com/problems/max-stack/) | [Solution](https://leetcode.com/problems/max-stack/solutions/4856115/heap-stack-set-comparable-node)
