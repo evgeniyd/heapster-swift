@@ -48,3 +48,4 @@ Problems that *can* be solved with `Heap` data structure.
 * [716. Max Stack](https://leetcode.com/problems/max-stack/) | [Solution](https://leetcode.com/problems/max-stack/solutions/4856115/heap-stack-set-comparable-node)
 * [253. Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) | [Solution](https://leetcode.com/problems/meeting-rooms-ii/solutions/4934650/heaps-solutions-1-heap-2-heaps/)
 * [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/description/) | [Solution](https://leetcode.com/problems/top-k-frequent-elements/solutions/4939645/maxheap-with-comparable-struct)
+* [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/description/) | [Solution](https://leetcode.com/problems/kth-largest-element-in-an-array/solutions/7189938/maxheap-solution-by-playability-0mym)
